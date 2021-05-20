@@ -18,7 +18,8 @@
     "integration:jit": "cd integration && yarn e2e",
     "integration:aot": "cd integration && yarn e2e:aot",
     "preprotractor": "webdriver-manager update --gecko false --standalone false 87.0.4280.20",
-    "lint": "tslint -c tslint.json --project ./tsconfig.json -t verbose"
+    "lint": "tslint -c tslint.json --project ./tsconfig.json -t verbose",
+    "postinstall": "npm run build"
   },
   "author": "Jeff Whelpley",
   "license": "MIT",
