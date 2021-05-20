@@ -27,7 +27,7 @@ function getNodeKeyForPreboot(nodeContext) {
     for (let i = len - 1; i >= 0; i--) {
         temp = ancestors[i];
         if (temp.childNodes && i > 0) {
-            for (let j = 0, n = 1; j < temp.childNodes.length; j++) {
+            for (let j = 0, n = 0; j < temp.childNodes.length; j++) {
                 // Node is not a comment node
                 if (temp.childNodes[j].nodeType !== 8) {
                     n++;
