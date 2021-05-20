@@ -20,6 +20,13 @@
     "preprotractor": "webdriver-manager update --gecko false --standalone false 87.0.4280.20",
     "lint": "tslint -c tslint.json --project ./tsconfig.json -t verbose"
   },
+  "main": "dist/bundles/preboot.umd.js",
+  "module": "dist/fesm2015/preboot.js",
+  "es2015": "dist/fesm2015/preboot.js",
+  "esm2015": "dist/esm2015/preboot.js",
+  "fesm2015": "dist/fesm2015/preboot.js",
+  "typings": "dist/preboot.d.ts",
+  "metadata": "dist/preboot.metadata.json",
   "author": "Jeff Whelpley",
   "license": "MIT",
   "contributors": [

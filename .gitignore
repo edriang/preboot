@@ -23,6 +23,5 @@ integration/src/**/*.js
 integration/e2e/**/*.js
 integration/**/*.js.map
 integration/**/*.d.ts
-*.metadata.json
 *.ngsummary.json
 
