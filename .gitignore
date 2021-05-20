@@ -8,7 +8,6 @@ logs
 
 /npm-shrinkwrap.json
 
-dist/
 dist-tarball/
 node_modules/
 out-tsc/

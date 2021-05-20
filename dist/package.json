@@ -1,0 +1,42 @@
+{
+  "name": "preboot",
+  "version": "8.0.0",
+  "description": "Record server view events and play back to Angular client view",
+  "main": "bundles/preboot.umd.js",
+  "module": "fesm2015/preboot.js",
+  "es2015": "fesm2015/preboot.js",
+  "typings": "preboot.d.ts",
+  "author": "Jeff Whelpley",
+  "license": "MIT",
+  "contributors": [
+    "Tobias Bosch <tbosch@google.com>",
+    "PatrickJS <github@gdi2290.com>",
+    "Jeff Whelpley <jeff@gethuman.com>"
+  ],
+  "keywords": [
+    "angular",
+    "preboot",
+    "ssr",
+    "prerender",
+    "universal"
+  ],
+  "peerDependencies": {
+    "@angular/common": ">=11.0.0",
+    "@angular/core": ">=11.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/angular/preboot"
+  },
+  "bugs": {
+    "url": "https://github.com/angular/preboot/issues"
+  },
+  "homepage": "https://github.com/angular/preboot",
+  "esm2015": "esm2015/preboot.js",
+  "fesm2015": "fesm2015/preboot.js",
+  "metadata": "preboot.metadata.json",
+  "sideEffects": false,
+  "dependencies": {
+    "tslib": "^2.0.0"
+  }
+}
