@@ -2,7 +2,29 @@
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/common'), require('rxjs/operators')) :
     typeof define === 'function' && define.amd ? define('preboot', ['exports', '@angular/core', '@angular/common', 'rxjs/operators'], factory) :
     (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.preboot = {}, global.ng.core, global.ng.common, global.rxjs.operators));
-}(this, (function (exports, core, common, operators) { 'use strict';
+}(this, (function (exports, i0, common, operators) { 'use strict';
+
+    function _interopNamespace(e) {
+        if (e && e.__esModule) return e;
+        var n = Object.create(null);
+        if (e) {
+            Object.keys(e).forEach(function (k) {
+                if (k !== 'default') {
+                    var d = Object.getOwnPropertyDescriptor(e, k);
+                    Object.defineProperty(n, k, d.get ? d : {
+                        enumerable: true,
+                        get: function () {
+                            return e[k];
+                        }
+                    });
+                }
+            });
+        }
+        n['default'] = e;
+        return Object.freeze(n);
+    }
+
+    var i0__namespace = /*#__PURE__*/_interopNamespace(i0);
 
     /**
      * Attempt to generate key from node position in the DOM
@@ -51,7 +73,7 @@
      * Use of this source code is governed by an MIT-style license that can be
      * found in the LICENSE file at https://angular.io/license
      */
-    var PREBOOT_NONCE = new core.InjectionToken('PrebootNonce');
+    var PREBOOT_NONCE = new i0.InjectionToken('PrebootNonce');
 
     /**
      * @license
@@ -1120,7 +1142,7 @@
      * found in the LICENSE file at https://angular.io/license
      */
     var PREBOOT_SCRIPT_CLASS = 'preboot-inline-script';
-    var PREBOOT_OPTIONS = new core.InjectionToken('PrebootOptions');
+    var PREBOOT_OPTIONS = new i0.InjectionToken('PrebootOptions');
     function createScriptFromCode(doc, nonce, inlineCode) {
         var script = doc.createElement('script');
         if (nonce) {
@@ -1175,14 +1197,14 @@
         };
     }
     var PREBOOT_PROVIDER = {
-        provide: core.APP_BOOTSTRAP_LISTENER,
+        provide: i0.APP_BOOTSTRAP_LISTENER,
         useFactory: PREBOOT_FACTORY,
         deps: [
             common.DOCUMENT,
             PREBOOT_OPTIONS,
-            [new core.Optional(), new core.Inject(PREBOOT_NONCE)],
-            core.PLATFORM_ID,
-            core.ApplicationRef,
+            [new i0.Optional(), new i0.Inject(PREBOOT_NONCE)],
+            i0.PLATFORM_ID,
+            i0.ApplicationRef,
             EventReplayer,
         ],
         multi: true
@@ -1206,11 +1228,17 @@
         };
         return PrebootModule;
     }());
-    PrebootModule.decorators = [
-        { type: core.NgModule, args: [{
-                    providers: [EventReplayer, PREBOOT_PROVIDER]
-                },] }
-    ];
+    PrebootModule.ɵfac = function PrebootModule_Factory(t) { return new (t || PrebootModule)(); };
+    PrebootModule.ɵmod = i0__namespace.ɵɵdefineNgModule({ type: PrebootModule });
+    PrebootModule.ɵinj = i0__namespace.ɵɵdefineInjector({ providers: [EventReplayer, PREBOOT_PROVIDER] });
+    (function () {
+        (typeof ngDevMode === "undefined" || ngDevMode) && i0__namespace.ɵsetClassMetadata(PrebootModule, [{
+                type: i0.NgModule,
+                args: [{
+                        providers: [EventReplayer, PREBOOT_PROVIDER]
+                    }]
+            }], null, null);
+    })();
 
     /**
      * @license
@@ -1245,9 +1273,6 @@
     exports.start = start;
     exports.stringifyWithFunctions = stringifyWithFunctions;
     exports.validateOptions = validateOptions;
-    exports.ɵa = PREBOOT_OPTIONS;
-    exports.ɵb = PREBOOT_FACTORY;
-    exports.ɵc = PREBOOT_PROVIDER;
 
     Object.defineProperty(exports, '__esModule', { value: true });
 

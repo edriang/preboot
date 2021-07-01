@@ -1,3 +1,4 @@
+import * as i0 from '@angular/core';
 import { InjectionToken, APP_BOOTSTRAP_LISTENER, Optional, Inject, PLATFORM_ID, ApplicationRef, NgModule } from '@angular/core';
 import { isPlatformServer, isPlatformBrowser, DOCUMENT } from '@angular/common';
 import { filter, take } from 'rxjs/operators';
@@ -875,11 +876,15 @@ class PrebootModule {
         };
     }
 }
-PrebootModule.decorators = [
-    { type: NgModule, args: [{
+PrebootModule.ɵfac = function PrebootModule_Factory(t) { return new (t || PrebootModule)(); };
+PrebootModule.ɵmod = i0.ɵɵdefineNgModule({ type: PrebootModule });
+PrebootModule.ɵinj = i0.ɵɵdefineInjector({ providers: [EventReplayer, PREBOOT_PROVIDER] });
+(function () { (typeof ngDevMode === "undefined" || ngDevMode) && i0.ɵsetClassMetadata(PrebootModule, [{
+        type: NgModule,
+        args: [{
                 providers: [EventReplayer, PREBOOT_PROVIDER]
-            },] }
-];
+            }]
+    }], null, null); })();
 
 /**
  * @license
@@ -893,5 +898,5 @@ PrebootModule.decorators = [
  * Generated bundle index. Do not edit.
  */
 
-export { EventReplayer, PREBOOT_NONCE, PrebootModule, _window, assign, createBuffer, createListenHandler, createOverlay, defaultOptions, getAppRoot, getEventRecorderCode, getInlineDefinition, getInlineInvocation, getNodeKeyForPreboot, getSelection, handleEvents, initAll, initFunctionName, start, stringifyWithFunctions, validateOptions, PREBOOT_OPTIONS as ɵa, PREBOOT_FACTORY as ɵb, PREBOOT_PROVIDER as ɵc };
+export { EventReplayer, PREBOOT_NONCE, PrebootModule, _window, assign, createBuffer, createListenHandler, createOverlay, defaultOptions, getAppRoot, getEventRecorderCode, getInlineDefinition, getInlineInvocation, getNodeKeyForPreboot, getSelection, handleEvents, initAll, initFunctionName, start, stringifyWithFunctions, validateOptions };
 //# sourceMappingURL=preboot.js.map

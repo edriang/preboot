@@ -28,7 +28,7 @@
     "./typings.d.ts"
   ],
   "angularCompilerOptions": {
-    "enableIvy": false,
+    "enableIvy": true,
     "strictMetadataEmit": true,
     "skipTemplateCodegen": true,
   }

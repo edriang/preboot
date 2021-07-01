@@ -1,6 +1,6 @@
 {
-  "name": "preboot",
-  "version": "8.0.0",
+  "name": "@pedixapp/preboot",
+  "version": "8.1.1",
   "description": "Record server view events and play back to Angular client view",
   "scripts": {
     "clean": "rimraf out-tsc dist/* dist-tarball/*",
