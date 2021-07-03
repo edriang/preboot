@@ -1,6 +1,6 @@
 {
   "name": "@pedixapp/preboot",
-  "version": "8.1.3",
+  "version": "8.1.5",
   "description": "Record server view events and play back to Angular client view",
   "main": "bundles/pedixapp-preboot.umd.js",
   "module": "fesm2015/pedixapp-preboot.js",
